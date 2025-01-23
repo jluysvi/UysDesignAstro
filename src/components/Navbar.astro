@@ -1,8 +1,14 @@
 ---
-
+const links = [
+  { href: "/", text: "Home" },
+  { href: "/services", text: "Services" },
+  { href: "/about", text: "About" },
+  { href: "/blog", text: "Blog" },
+  { href: "/contact", text: "Contact" },
+];
 ---
 
-<div class="navbar bg-base-100">
+<div class="navbar sticky top-0 bg-base-100">
   <div class="navbar-start">
     <div class="dropdown">
       <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -24,35 +30,32 @@
         tabindex="0"
         class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
       >
-        <li><a>About</a></li>
-        <li>
-          <a>Services</a>
-          <ul class="p-2">
-            <li><a>Web Design</a></li>
-            <li><a>Online Advertising</a></li>
-          </ul>
-        </li>
-        <li><a>FAQ</a></li>
+        {
+          links.map((link) => (
+            <li>
+              <a href={link.href}>{link.text}</a>
+            </li>
+          ))
+        }
       </ul>
     </div>
-    <img src="/3.png" alt="Logo" width="80"/>
-    <div class="hidden lg:flex">
-      <ul class="menu menu-horizontal px-1">
-        <li><a>About</a></li>
-        <li>
-          <details>
-            <summary>Services</summary>
-            <ul class="p-2">
-              <li><a>Web Design</a></li>
-              <li><a>Online Advertising</a></li>
-            </ul>
-          </details>
-        </li>
-        <li><a>FAQ</a></li>
-      </ul>
-    </div>
+    <a class="btn btn-ghost text-xl">
+      <img src="/UysDesignLogoBlue.png" alt="Logo" class="h-12 w-12" />
+      Uys Design
+    </a>
+  </div>
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu menu-horizontal px-1">
+      {
+        links.map((link) => (
+          <li>
+            <a href={link.href}>{link.text}</a>
+          </li>
+        ))
+      }
+    </ul>
   </div>
   <div class="navbar-end">
-    <a class="btn btn-accent">Contact Me</a>
+    <a class="btn btn-primary btn-md font-bold mr-5 lg:mr-10" href="/contact" >Get Started</a>
   </div>
 </div>
