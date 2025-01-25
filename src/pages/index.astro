@@ -25,7 +25,7 @@ import seoIcon from "../images/noun-seo.svg";
         <h2 class="text-3xl text-slate-700 py-2">
           Good looking, fast and SEO friendly.
         </h2>
-        <p>
+        <p class="text-lg">
           We believe anything worth doing is worth doing well. That's why we
           code all our websites from scratch. No WordPress, no site builders.
           Just plain old HTML and CSS. <br /> Why?
@@ -35,48 +35,64 @@ import seoIcon from "../images/noun-seo.svg";
     </div>
   </div>
   <!-- Cards Section -->
-  <div
-    class="flex flex-row min-h-screen justify-center items-center flex-wrap gap-10 p-10"
-  >
-    <div class="card bg-slate-200 w-96 shadow-xl">
-      <figure>
-        <img
-          src={responsiveIcon.src}
-          alt="Responsive Design Icon"
-          class="w-40 h-40 pt-10"
-        />
-      </figure>
-      <div class="card-body">
-        <h2 class="card-title">Fully Responsive</h2>
-        <p>
-          More than half of your customers will use their phones to access your
-          website. We make sure the experience is great on any device.
-        </p>
+  <div class="min-h-screen">
+    <h1 class="text-center text-5xl mt-20">What We Do</h1>
+    <p class="w-4/5 lg:w-2/5 text-center mx-auto text-lg mt-5 bg-slate-100 rounded-lg p-10 shadow-xl"> 
+      At Uys Design, we specialise in web design for small businesses and we do
+      development for the whole South Africa. We don't use WordPress or other
+      similar content management systems. We code everything from scratch for
+      the best performance and search rankings which gets your more customers
+      and more revenue. We also offer 24/7 support and we are always available
+      to make any edits to the site that you would want. We want to foster
+      long-term relationships with our clients and grow with them.
+    </p>
+    <div
+      class="flex flex-row justify-center items-center flex-wrap gap-10 p-10"
+    >
+      <div class="card bg-slate-200 w-96 shadow-xl">
+        <figure>
+          <img
+            src={responsiveIcon.src}
+            alt="Responsive Design Icon"
+            class="w-40 h-40 pt-10"
+          />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">Fully Responsive</h2>
+          <p>
+            More than half of your customers will use their phones to access
+            your website. We make sure the experience is great on any device.
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="card bg-slate-200 w-96 shadow-xl">
-      <figure>
-        <img src={htmlIcon.src} alt="HTML Icon" class="w-40 h-40 pt-10" />
-      </figure>
-      <div class="card-body">
-        <h2 class="card-title">Built From Scratch</h2>
-        <p>
-          Our sites are built from scratch with HTML and CSS, which means faster
-          load times and a better customer experience. **Learn about the affect
-          of page load times.**
-        </p>
+      <div class="card bg-slate-200 w-96 shadow-xl">
+        <figure>
+          <img src={htmlIcon.src} alt="HTML Icon" class="w-40 h-40 pt-10" />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">Built From Scratch</h2>
+          <p>
+            Our sites are built from scratch with HTML and CSS, which means
+            faster load times and a better customer experience. <a
+              href="/contact"
+              class="link"
+            >
+              Learn about the affect of page load times.
+            </a>
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="card bg-slate-200 w-96 shadow-xl">
-      <figure>
-        <img src={seoIcon.src} alt="SEO Icon" class="w-40 h-40 pt-10" />
-      </figure>
-      <div class="card-body">
-        <h2 class="card-title">Optimised for SEO</h2>
-        <p>
-          We make sure that you business ranks well for key search terms in your
-          industry.
-        </p>
+      <div class="card bg-slate-200 w-96 shadow-xl">
+        <figure>
+          <img src={seoIcon.src} alt="SEO Icon" class="w-40 h-40 pt-10" />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">Optimised for SEO</h2>
+          <p>
+            We make sure that you business ranks well for key search terms in
+            your industry.
+          </p>
+        </div>
       </div>
     </div>
   </div>
