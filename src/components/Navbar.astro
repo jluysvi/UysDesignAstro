@@ -6,6 +6,9 @@ const links = [
   { href: "/blog", text: "Blog" },
   { href: "/contact", text: "Contact" },
 ];
+
+import { Image } from 'astro:assets';
+import logoBlue from "../images/UysDesignLogoBlue.png";
 ---
 
 <div class="navbar sticky top-0 bg-base-100">
@@ -40,7 +43,7 @@ const links = [
       </ul>
     </div>
     <a class="btn btn-ghost text-xl">
-      <img src="/UysDesignLogoBlue.png" alt="Logo" class="h-12 w-12" />
+      <Image src={logoBlue} alt="Logo" class="h-12 w-12" />
       Uys Design
     </a>
   </div>
