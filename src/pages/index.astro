@@ -1,9 +1,10 @@
 ---
 import DefaultLayout from "../layouts/DefaultLayout.astro";
 
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 import cssImage from "../images/CSS.jpg";
 ---
+
 <DefaultLayout>
   <!-- Hero Section -->
   <div class="hero bg-base-200 min-h-screen">
@@ -11,16 +12,71 @@ import cssImage from "../images/CSS.jpg";
       <Image
         src={cssImage}
         alt="Laptop with CSS code"
+        width="500"
+        height="500"
         class="max-w-sm rounded-lg shadow-2xl"
       />
       <div>
         <h1 class="text-5xl font-bold">We build websites for businesses.</h1>
-        <p class="py-6">
-          Good looking, lightning fast and SEO friendly.
-        </p>
+        <p class="py-6">Good looking, lightning fast and SEO friendly.</p>
         <button class="btn btn-primary">Get Started</button>
       </div>
     </div>
   </div>
   <!-- Cards Section -->
+  <div
+    class="flex flex-row min-h-screen justify-center items-center flex-wrap gap-10 p-10"
+  >
+    <div class="card bg-base-100 w-96 shadow-xl">
+      <figure>
+        <Image
+          src={cssImage}
+          alt="Laptop with CSS code"
+          width="500"
+          height="400"
+        />
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title">Shoes!</h2>
+        <p>If a dog chews shoes whose shoes does he choose?</p>
+        <div class="card-actions justify-end">
+          <button class="btn btn-primary">Buy Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="card bg-base-100 w-96 shadow-xl">
+      <figure>
+        <Image
+          src={cssImage}
+          alt="Laptop with CSS code"
+          width="500"
+          height="400"
+        />
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title">Shoes!</h2>
+        <p>If a dog chews shoes whose shoes does he choose?</p>
+        <div class="card-actions justify-end">
+          <button class="btn btn-primary">Buy Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="card bg-base-100 w-96 shadow-xl">
+      <figure>
+        <Image
+          src={cssImage}
+          alt="Laptop with CSS code"
+          width="500"
+          height="400"
+        />
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title">Shoes!</h2>
+        <p>If a dog chews shoes whose shoes does he choose?</p>
+        <div class="card-actions justify-end">
+          <button class="btn btn-primary">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </DefaultLayout>

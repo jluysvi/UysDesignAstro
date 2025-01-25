@@ -2,6 +2,7 @@
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 const {pageTitle} = Astro.props;
+import logoBlue from "../images/UysDesignLogoBlue.png";
 ---
 
 <!DOCTYPE html>
@@ -10,7 +11,8 @@ const {pageTitle} = Astro.props;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uys Design</title>
-    <link rel="icon" href="/UysDesignLogoBlue.png" type="image/x-icon">
+    <meta name="description" content="We build websites for businesses. Good looking, lightning fast and SEO friendly.">
+    <link rel="icon" href={logoBlue.src} type="image/x-icon">
 </head>
 <body>
     <Navbar/>
