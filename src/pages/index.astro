@@ -3,6 +3,10 @@ import DefaultLayout from "../layouts/DefaultLayout.astro";
 
 import { Image } from "astro:assets";
 import cssImage from "../images/CSS.jpg";
+
+import htmlIcon from "../images/noun-html.svg";
+import responsiveIcon from "../images/noun-responsive.svg";
+import seoIcon from "../images/noun-seo.svg";
 ---
 
 <DefaultLayout>
@@ -17,9 +21,9 @@ import cssImage from "../images/CSS.jpg";
         class="max-w-sm rounded-lg shadow-2xl"
       />
       <div>
-        <h1 class="text-5xl font-bold">We build websites for businesses.</h1>
+        <h1 class="text-5xl font-bold">We build business websites.</h1>
         <p class="py-6">Good looking, lightning fast and SEO friendly.</p>
-        <button class="btn btn-primary">Get Started</button>
+        <a href="/contact" class="btn btn-primary">Get Started</a>
       </div>
     </div>
   </div>
@@ -27,55 +31,45 @@ import cssImage from "../images/CSS.jpg";
   <div
     class="flex flex-row min-h-screen justify-center items-center flex-wrap gap-10 p-10"
   >
-    <div class="card bg-base-100 w-96 shadow-xl">
+    <div class="card bg-slate-200 w-96 shadow-xl">
       <figure>
-        <Image
-          src={cssImage}
-          alt="Laptop with CSS code"
-          width="500"
-          height="400"
+        <img
+          src={responsiveIcon.src}
+          alt="Responsive Design Icon"
+          class="w-40 h-40 pt-10"
         />
       </figure>
       <div class="card-body">
-        <h2 class="card-title">Shoes!</h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
-        <div class="card-actions justify-end">
-          <button class="btn btn-primary">Buy Now</button>
-        </div>
+        <h2 class="card-title">Fully Responsive</h2>
+        <p>
+          More than half of your customers will use their phones to access your
+          website. We make sure the experience is great on any device.
+        </p>
       </div>
     </div>
-    <div class="card bg-base-100 w-96 shadow-xl">
+    <div class="card bg-slate-200 w-96 shadow-xl">
       <figure>
-        <Image
-          src={cssImage}
-          alt="Laptop with CSS code"
-          width="500"
-          height="400"
-        />
+        <img src={htmlIcon.src} alt="HTML Icon" class="w-40 h-40 pt-10" />
       </figure>
       <div class="card-body">
-        <h2 class="card-title">Shoes!</h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
-        <div class="card-actions justify-end">
-          <button class="btn btn-primary">Buy Now</button>
-        </div>
+        <h2 class="card-title">Built From Scratch</h2>
+        <p>
+          Our sites are built from scratch with HTML and CSS, which means faster
+          load times and a better customer experience. **Learn about the affect
+          of page load times.**
+        </p>
       </div>
     </div>
-    <div class="card bg-base-100 w-96 shadow-xl">
+    <div class="card bg-slate-200 w-96 shadow-xl">
       <figure>
-        <Image
-          src={cssImage}
-          alt="Laptop with CSS code"
-          width="500"
-          height="400"
-        />
+        <img src={seoIcon.src} alt="SEO Icon" class="w-40 h-40 pt-10" />
       </figure>
       <div class="card-body">
-        <h2 class="card-title">Shoes!</h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
-        <div class="card-actions justify-end">
-          <button class="btn btn-primary">Buy Now</button>
-        </div>
+        <h2 class="card-title">Optimised for SEO</h2>
+        <p>
+          We make sure that you business ranks well for key search terms in your
+          industry.
+        </p>
       </div>
     </div>
   </div>

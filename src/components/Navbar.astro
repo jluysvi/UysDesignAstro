@@ -1,12 +1,5 @@
 ---
-const links = [
-  { href: "/", text: "Home" },
-  { href: "/services", text: "Services" },
-  { href: "/about", text: "About" },
-  { href: "/blog", text: "Blog" },
-  { href: "/contact", text: "Contact" },
-];
-
+import {links} from "../variables/config.js";
 import { Image } from 'astro:assets';
 import logoBlue from "../images/UysDesignLogoBlue.png";
 ---
@@ -42,7 +35,7 @@ import logoBlue from "../images/UysDesignLogoBlue.png";
         }
       </ul>
     </div>
-    <a class="btn btn-ghost text-xl">
+    <a class="btn btn-ghost text-xl" href="/">
       <Image src={logoBlue} alt="Logo" class="h-12 w-12" />
       Uys Design
     </a>
