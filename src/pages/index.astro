@@ -2,7 +2,6 @@
 import DefaultLayout from "../layouts/DefaultLayout.astro";
 
 import { Image } from "astro:assets";
-import cssImage from "../images/CSS.jpg";
 
 import htmlIcon from "../images/noun-html.svg";
 import responsiveIcon from "../images/noun-responsive.svg";
@@ -11,40 +10,31 @@ import seoIcon from "../images/noun-seo.svg";
 
 <DefaultLayout>
   <!-- Hero Section -->
-  <div class="hero bg-base-200 min-h-screen">
-    <div class="hero-content flex-col lg:flex-row-reverse">
-      <Image
-        src={cssImage}
-        alt="Laptop with CSS code"
-        width="500"
-        height="500"
-        class="max-w-sm rounded-lg shadow-2xl"
-      />
-      <div>
-        <h1 class="text-5xl font-bold">We build business websites.</h1>
-        <h2 class="text-3xl text-slate-700 py-2">
-          Good looking, fast and SEO friendly.
-        </h2>
-        <p class="text-lg">
-          We believe anything worth doing is worth doing well. That's why we
-          code all our websites from scratch. No WordPress, no site builders.
-          Just plain old HTML and CSS. <br /> Why?
+  <div class="hero min-h-screen" style="background: linear-gradient(135deg, #e0f7fa, #e1bee7);">
+    <div class="hero-content text-center">
+      <div class="max-w-lg">
+        <h1 class="text-7xl font-light">We Build Business Websites.</h1>
+        <p class="py-6 text-lg">
+          Good looking, lightning fast and SEO friendly. We code each and every
+          site that we build from scratch. No WordPress, no site builders, no
+          shortcuts. Yes, it's way more work, but the results are more than
+          worth it.
         </p>
-        <a href="/contact" class="btn btn-primary my-6">Get Started</a>
+        <button class="btn btn-primary">Get Started</button>
       </div>
     </div>
   </div>
   <!-- Cards Section -->
   <div class="min-h-screen">
-    <h1 class="text-center text-5xl mt-20">What We Do</h1>
-    <p class="w-4/5 lg:w-2/5 text-center mx-auto text-lg mt-5 bg-slate-100 rounded-lg p-10 shadow-xl"> 
+    <h1 class="text-center font-light text-6xl mt-20">What We Do</h1>
+    <p class="w-4/5 lg:w-2/5 text-justify mx-auto my-10 text-lg">
       At Uys Design, we specialise in web design for small businesses and we do
-      development for the whole South Africa. We don't use WordPress or other
-      similar content management systems. We code everything from scratch for
-      the best performance and search rankings which gets your more customers
-      and more revenue. We also offer 24/7 support and we are always available
-      to make any edits to the site that you would want. We want to foster
-      long-term relationships with our clients and grow with them.
+      development for the whole South Africa. The reason we don't use WordPress
+      and rather code everything from scratch is because we want optimal site
+      performance and better search rankings for your site. We also offer 24/7
+      support and we are always available to make any edits to the site that you
+      would want. We want to foster long-term relationships with our clients and
+      grow with them.
     </p>
     <div
       class="flex flex-row justify-center items-center flex-wrap gap-10 p-10"
@@ -58,7 +48,7 @@ import seoIcon from "../images/noun-seo.svg";
           />
         </figure>
         <div class="card-body">
-          <h2 class="card-title">Fully Responsive</h2>
+          <h2 class="card-title font-light text-3xl">Fully Responsive</h2>
           <p>
             More than half of your customers will use their phones to access
             your website. We make sure the experience is great on any device.
@@ -70,15 +60,10 @@ import seoIcon from "../images/noun-seo.svg";
           <img src={htmlIcon.src} alt="HTML Icon" class="w-40 h-40 pt-10" />
         </figure>
         <div class="card-body">
-          <h2 class="card-title">Built From Scratch</h2>
+          <h2 class="card-title font-light text-3xl">Built From Scratch</h2>
           <p>
             Our sites are built from scratch with HTML and CSS, which means
-            faster load times and a better customer experience. <a
-              href="/contact"
-              class="link font-bold text-blue-500"
-            >
-              Learn about the affect of page load times.
-            </a>
+            that our sites perform better, rank better in search engines and give your customer a better experience. 
           </p>
         </div>
       </div>
@@ -87,11 +72,59 @@ import seoIcon from "../images/noun-seo.svg";
           <img src={seoIcon.src} alt="SEO Icon" class="w-40 h-40 pt-10" />
         </figure>
         <div class="card-body">
-          <h2 class="card-title">Optimised for SEO</h2>
+          <h2 class="card-title font-light text-3xl">Optimised for SEO</h2>
           <p>
-            We make sure that you business ranks well for key search terms in
+            We don't make any wild claims about SEO. 
+            We just make sure that you business ranks well for key search terms in
             your industry.
           </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Our Offer Section -->
+  <div class="min-h-screen bg-slate-100 py-20 flex justify-center items-center">
+    <div class="w-full max-w-6xl">
+      <h1 class="text-center font-light text-6xl">Our Offer</h1>
+      <p class="w-4/5 lg:w-2/5 text-justify mx-auto my-10 text-lg">
+        A standard 5-page business website will set you back R17000, or you can choose a 12 month contract for R1000 a month. If you need more than that, we do personalised pricing based on the number of pages and additional development time. During our service period you get hosting, development, 24/7 support, unlimited edits and updates.
+      </p>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 p-10">
+        <div class="card bg-white w-full shadow-xl">
+          <div class="card-body">
+            <h2 class="card-title font-light text-3xl">🔒 100% Secure</h2>
+            <p>Because our sites are just static CSS and HTML, there's nothing to hack.</p>
+          </div>
+        </div>
+        <div class="card bg-white w-full shadow-xl">
+          <div class="card-body">
+            <h2 class="card-title font-light text-3xl">🎨 Custom Design</h2>
+            <p>We build everything from the ground up, so we can do whatever we want.</p>
+          </div>
+        </div>
+        <div class="card bg-white w-full shadow-xl">
+          <div class="card-body">
+            <h2 class="card-title font-light text-3xl">⚡ 100 Page Speed Scores</h2>
+            <p>Our sites are as fast as they get, zero bloat.</p>
+          </div>
+        </div>
+        <div class="card bg-white w-full shadow-xl">
+          <div class="card-body">
+            <h2 class="card-title font-light text-3xl">💰 Money Back Guarantee</h2>
+            <p>We stand by our work. If you don't like what you get we give you everything back.</p>
+          </div>
+        </div>
+        <div class="card bg-white w-full shadow-xl">
+          <div class="card-body">
+            <h2 class="card-title font-light text-3xl">📞 Unrivalled Support</h2>
+            <p>Call us anytime, seriously.</p>
+          </div>
+        </div>
+        <div class="card bg-white w-full shadow-xl">
+          <div class="card-body">
+            <h2 class="card-title font-light text-3xl">🔍 We know SEO</h2>
+            <p>No bullshit. We explain exactly how SEO works and what we can do to get you to rank.</p>
+          </div>
         </div>
       </div>
     </div>
