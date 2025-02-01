@@ -1,4 +1,14 @@
 ---
+import Navbar from "../components/Navbar.astro"
+import { getImage } from "astro:assets";
+import logo from "../images/UysDesignLogoBlue.png";
+
+const optimizedIcon = await getImage({
+    src: logo,
+    width: 32,
+    height: 32,
+    format: 'png',
+});
 ---
 
 <!doctype html>
@@ -7,8 +17,10 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Uys Design</title>
+        <link rel="icon" type="image/png" href={optimizedIcon.src} />
     </head>
     <body class="bg-gray-900">
+        <Navbar />
         <slot />
     </body>
 </html>

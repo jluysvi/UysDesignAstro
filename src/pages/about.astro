@@ -1,0 +1,131 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import backgroundColour from "../images/bg.webp";
+
+const processSteps = [
+    {
+        number: "1",
+        title: "Discovery & Consultation",
+        description: "After signing a contract with us, we'll send you a detailed questionnaire to learn more about your business, your goals, and your target audience. This helps us understand your vision and ensures we create a website that aligns perfectly with your brand."
+    },
+    {
+        number: "2",
+        title: "Content Creation & Strategy",
+        description: "Once we've gathered all the necessary information, our team gets to work crafting compelling content for your website. We focus on creating clear, engaging, and SEO-optimized copy that speaks directly to your audience and drives conversions."
+    },
+    {
+        number: "3",
+        title: "Design & Wireframing",
+        description: "Next, we create a custom design tailored to your brand. Using the insights from our initial consultation, we develop a wireframe and mockup of your site. You'll have the opportunity to review the design and provide feedback, ensuring it's exactly what you envisioned."
+    },
+    {
+        number: "4",
+        title: "Development & Coding",
+        description: "Once the design is approved, our development team takes over. Unlike other agencies that rely on page builders or WordPress, we hand-code your website from scratch. This ensures a lightweight, fast-loading, and secure site that's built to perform."
+    },
+    {
+        number: "5",
+        title: "Review & Revisions",
+        description: "After the initial build, we'll share a preview of your website for your review. We welcome your feedback and make any necessary revisions to ensure everything is perfect."
+    },
+    {
+        number: "6",
+        title: "Testing & Optimization",
+        description: "Before launching your site, we rigorously test it across all devices and browsers to ensure it looks and functions flawlessly. We also optimize it for speed, security, and SEO, so you're ready to hit the ground running."
+    },
+    {
+        number: "7",
+        title: "Launch & Support",
+        description: "Once you're 100% satisfied, we'll launch your website and make it live for the world to see. But our job doesn't end there—we're here to provide ongoing support and guidance to help you grow your online presence."
+    }
+];
+---
+
+<Layout>
+    <section class="relative min-h-screen">
+        <Image
+            src={backgroundColour}
+            alt="Background color"
+            class="fixed inset-0 w-full h-full object-cover -z-10"
+        />
+        <div class="absolute inset-0 bg-black/80 -z-10"></div>
+        
+        <div class="relative z-10 max-w-6xl mx-auto px-4 py-20">
+            <!-- Introduction -->
+            <div class="max-w-3xl mx-auto mb-20">
+                <h1 class="text-4xl md:text-5xl text-white font-bold mb-8">About Uys Design</h1>
+                <div class="prose prose-lg prose-invert">
+                    <p class="text-gray-300 mb-6">
+                        My name is Cobus Uys, and I am the owner and lead developer at Uys Design. My passion for computers and the internet began at a young age, and I taught myself how to code during my early high school years. As I delved deeper into web development, I noticed a glaring gap in the market: business owners had very few options when it came to high-quality, custom websites that truly represented their brand and drove results.
+                    </p>
+                    <p class="text-gray-300 mb-6">
+                        Frustrated by the limitations of cookie-cutter solutions like WordPress and page builders, I decided to take matters into my own hands. I founded Uys Design with a mission to create fast, secure, and visually stunning websites that not only look amazing but also perform exceptionally well.
+                    </p>
+                    <p class="text-gray-300">
+                        At Uys Design, we believe that every business deserves a website that works as hard as they do. That's why we hand-code every site from scratch, ensuring it's tailored to your unique needs and goals. Whether you're a small business looking to establish an online presence or a growing company aiming to dominate your industry, we're here to help you succeed.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Our Process -->
+            <div class="mb-20">
+                <h2 class="text-3xl md:text-4xl text-white font-bold mb-12 text-center">Our Process</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    {processSteps.map(step => (
+                        <div class="bg-gray-800/80 rounded-lg p-8 backdrop-blur relative overflow-hidden group hover:bg-gray-700/80 transition-all duration-300">
+                            <div class="absolute top-0 left-0 w-20 h-20 bg-blue-600/20 rounded-br-3xl flex items-center justify-center text-4xl font-bold text-blue-400">
+                                {step.number}
+                            </div>
+                            <div class="ml-16">
+                                <h3 class="text-xl text-white font-bold mb-4">{step.title}</h3>
+                                <p class="text-gray-300">{step.description}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="bg-gray-800/80 rounded-lg p-8 backdrop-blur mb-20">
+                <h2 class="text-2xl text-white font-bold mb-4">Timeline</h2>
+                <p class="text-gray-300">
+                    From start to finish, the entire process typically takes 2-3 weeks, depending on the complexity of your project. We pride ourselves on delivering high-quality results efficiently, without cutting corners.
+                </p>
+            </div>
+
+            <!-- Why Choose Us -->
+            <div class="text-center mb-20">
+                <h2 class="text-3xl text-white font-bold mb-8">Why Choose Uys Design?</h2>
+                <ul class="grid md:grid-cols-2 gap-4 text-left max-w-3xl mx-auto">
+                    <li class="flex items-center text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        Custom-Coded Websites: No page builders, no WordPress—just clean, hand-written code.
+                    </li>
+                    <li class="flex items-center text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        Tailored Solutions: Every website is designed and developed to meet your unique needs
+                    </li>
+                </ul>
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center">
+                <h2 class="text-3xl text-white font-bold mb-6">Let's Build Something Amazing Together</h2>
+                <p class="text-gray-300 mb-8 max-w-2xl mx-auto">
+                    At Uys Design, we're passionate about helping businesses like yours thrive online. If you're ready to take your website to the next level, contact Cobus Uys today to get started.
+                </p>
+                <a 
+                    href="/contact" 
+                    class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-md transition duration-300"
+                >
+                    Start Your Project
+                </a>
+            </div>
+        </div>
+    </section>
+</Layout>
