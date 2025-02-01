@@ -1,0 +1,92 @@
+---
+import { Image } from "astro:assets";
+import logo from "../images/UysDesignLogoBlue.png";
+
+const navLinks = [
+    { href: "/", text: "Home" },
+    { href: "/services", text: "Services" },
+    { href: "/about", text: "About" },
+    { href: "/portfolio", text: "Blog" },
+];
+---
+
+<nav class="bg-gray-900 shadow-lg sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between">
+            <div class="flex space-x-7">
+                <a href="/" class="flex items-center py-4 px-2">
+                    <Image
+                        src={logo}
+                        alt="Logo"
+                        class="h-16 w-16 mr-2 rounded-full p-1"
+                    />
+                </a>
+            </div>
+
+            <!-- Primary Nav -->
+            <div class="hidden md:flex items-center space-x-1">
+                {
+                    navLinks.map((link) => (
+                        <a
+                            href={link.href}
+                            class="py-4 px-2 text-gray-300 font-semibold hover:text-white 
+                              transition duration-300"
+                        >
+                            {link.text}
+                        </a>
+                    ))
+                }
+                <a
+                    href="/contact"
+                    class="py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700
+                          transition duration-300 ml-4"
+                >
+                    Get Started
+                </a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="md:hidden flex items-center">
+                <input type="checkbox" id="menu-toggle" class="hidden peer" />
+                <label for="menu-toggle" class="cursor-pointer md:hidden block">
+                    <svg
+                        class="h-6 w-6 text-gray-300"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </label>
+
+                <!-- Mobile Menu -->
+                <div
+                    class="hidden peer-checked:block absolute top-16 left-0 right-0 bg-gray-900
+                            shadow-lg p-4 z-50"
+                >
+                    {
+                        navLinks.map((link) => (
+                            <a
+                                href={link.href}
+                                class="block py-2 px-4 text-gray-300 hover:bg-gray-700 hover:text-white"
+                            >
+                                {link.text}
+                            </a>
+                        ))
+                    }
+                    <a
+                        href="/contact"
+                        class="block py-2 px-6 text-white font-bold bg-blue-600
+                              hover:bg-blue-700 mt-2"
+                    >
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
