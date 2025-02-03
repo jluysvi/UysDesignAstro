@@ -1,6 +1,7 @@
 ---
+layout: ../../layouts/BlogPost.astro
 title: "Why Page Load Speed Is Crucial for Your Business"
-date: "2024-01-15"
+date: "2025-02-02"
 excerpt: "Learn how page load times directly impact your business's bottom line and customer satisfaction."
 image: "/page-speed.webp"
 ---

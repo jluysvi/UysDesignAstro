@@ -1,6 +1,7 @@
 ---
+layout: ../../layouts/BlogPost.astro
 title: "The Critical Importance of Responsive Design"
-date: "2024-01-16"
+date: "2025-01-19"
 excerpt: "Why your website needs to work flawlessly across all devices and screen sizes."
 image: "/responsive.webp"
 ---

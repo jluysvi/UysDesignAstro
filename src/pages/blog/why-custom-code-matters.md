@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BlogPost.astro
 title: "Why Custom Code Matters: The Truth About Website Performance"
-date: "2024-01-15"
+date: "2025-01-15"
 image: "/custom-code.webp"
 excerpt: "Discover why hand-coded websites outperform WordPress and page builders in speed, security, and SEO rankings."
 ---

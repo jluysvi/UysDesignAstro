@@ -1,6 +1,7 @@
 ---
+layout: ../../layouts/BlogPost.astro
 title: "SEO Fundamentals: Why They Matter for Your Business"
-date: "2024-01-17"
+date: "2025-01-17"
 excerpt: "Understanding the basics of SEO and why it's crucial for your business growth."
 image: "/seo.webp"
 ---
