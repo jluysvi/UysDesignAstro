@@ -2,7 +2,7 @@
 title: "Why Page Load Speed Is Crucial for Your Business"
 date: "2024-01-15"
 excerpt: "Learn how page load times directly impact your business's bottom line and customer satisfaction."
-image: "/page-speed.jpg"
+image: "/page-speed.webp"
 ---
 
 # Why Page Load Speed Is Crucial for Your Business

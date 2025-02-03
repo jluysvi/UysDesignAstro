@@ -2,7 +2,7 @@
 title: "The Critical Importance of Responsive Design"
 date: "2024-01-16"
 excerpt: "Why your website needs to work flawlessly across all devices and screen sizes."
-image: "/responsive.jpg"
+image: "/responsive.webp"
 ---
 
 # The Critical Importance of Responsive Design
