@@ -21,7 +21,7 @@ const features = [
     title: "Money Back Guarantee",
     text: "We stand by our work. If you don't like what you get we give you everything back.",
   },
-  { title: "Unrivalled Support", text: "Call us anytime, seriously." },
+  { title: "Unrivalled Support", text: "If you ever have a problem, just give us a call. We'll sort it out in no time." },
   {
     title: "We know SEO",
     text: "No bullshit. We explain exactly how SEO works and what we can do to get you to rank.",
@@ -31,31 +31,28 @@ const features = [
 const pricingPlans = [
   {
     name: "Monthly",
-    price: "R700",
+    price: "R650",
     features: [
       { text: "Design and Development", included: true },
-      { text: "Hosting Included", included: true },
-      { text: "R500 fee Per Page after 5", included: true },
-      { text: "R300/mo. Unlimited Edits Add-On", included: true },
-      { text: "R2000 To Add A Blog", included: true },
       { text: "24/7 Support", included: true },
-      { text: "Lifetime Updates", included: true }
-    ]
+      { text: "Lifetime Updates", included: true },
+      { text: "SEO Optimization", included: true },
+      { text: "Mobile-First Responsive Design", included: true },
+      { text: "Hosting Included", included: true },
+    ],
   },
   {
-    name: "Once Off",
+    name: "Once-Off",
     price: "R5000",
     features: [
       { text: "Design and Development", included: true },
-      { text: "R500 fee Per Page after 5", included: true },
-      { text: "R300/mo. Unlimited Edits Add-On", included: true },
-      { text: "R2000 To Add A Blog", included: true },
-      { text: "12-Month Support", included: true },
-      { text: "R150/mo. Hosting", included: false },
-      { text: "Lifetime Updates", included: false }
+      { text: "12-Month 24/7 Support", included: true },
+      { text: "12-Month Updates", included: true },
+      { text: "SEO Optimization", included: true },
+      { text: "Mobile-First Responsive Design", included: true },
+      { text: "Hosting Included", included: false },
     ],
-    popular: true
-  }
+  },
 ];
 ---
 
@@ -249,7 +246,8 @@ const pricingPlans = [
       <div class="text-center mb-16">
         <h2 class="text-4xl md:text-5xl text-white mb-3">Our Offer</h2>
         <p class="text-gray-300 max-w-xl mx-auto text-center mb-16 text-lg">
-          A standard 5-page business website will set you back R5000, with a retainer fee of R500 per month for hosting and maintenance.
+          A standard 5-page business website will set you back R5000, with a
+          retainer fee of R500 per month for hosting and maintenance.
         </p>
       </div>
 
@@ -306,50 +304,71 @@ const pricingPlans = [
       </div>
 
       <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        {pricingPlans.map((plan) => (
-          <div class={`bg-gray-800 rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 ${plan.popular ? 'ring-2 ring-blue-500' : ''}`}>
-            <div class="p-8">
-              {plan.popular && (
-                <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
-                  MOST POPULAR
-                </span>
-              )}
-              <h3 class="text-2xl font-bold text-white mb-4">{plan.name}</h3>
-              <div class="text-4xl font-bold text-white mb-6">
-                {plan.price}
-                {plan.name === "Monthly" && <span class="text-lg text-gray-400">/month</span>}
+        {
+          pricingPlans.map((plan) => (
+            <div
+              class="bg-gray-800 rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 ring-1 ring-blue-500"
+            >
+              <div class="p-8">
+                <h3 class="text-2xl font-bold text-white mb-4">{plan.name}</h3>
+                <div class="text-4xl font-bold text-white mb-6">
+                  {plan.price}
+                  {plan.name === "Monthly" && (
+                    <span class="text-lg text-gray-400">/month</span>
+                  )}
+                </div>
+                <ul class="space-y-4 mb-8">
+                  {plan.features.map((feature) => (
+                    <li class="flex items-start">
+                      {feature.included ? (
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-6 w-6 text-blue-500 mr-2 flex-shrink-0"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                      ) : (
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-6 w-6 text-gray-500 mr-2 flex-shrink-0"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12"
+                          />
+                        </svg>
+                      )}
+                      <span
+                        class={`${feature.included ? "text-gray-300" : "text-gray-500"}`}
+                      >
+                        {feature.text}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href="/contact"
+                  class="block text-center py-3 px-6 rounded-md font-bold transition duration-300 bg-gray-700 text-white hover:bg-gray-600"
+                >
+                  Get Started
+                </a>
               </div>
-              <ul class="space-y-4 mb-8">
-                {plan.features.map((feature) => (
-                  <li class="flex items-start">
-                    {feature.included ? (
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                      </svg>
-                    ) : (
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                      </svg>
-                    )}
-                    <span class={`${feature.included ? 'text-gray-300' : 'text-gray-500'}`}>
-                      {feature.text}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-              <a
-                href="/contact"
-                class={`block text-center py-3 px-6 rounded-md font-bold transition duration-300 ${
-                  plan.popular 
-                    ? 'bg-blue-600 text-white hover:bg-blue-700' 
-                    : 'bg-gray-700 text-white hover:bg-gray-600'
-                }`}
-              >
-                Get Started
-              </a>
             </div>
-          </div>
-        ))}
+          ))
+        }
       </div>
     </div>
   </section>
