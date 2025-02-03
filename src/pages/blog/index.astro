@@ -16,14 +16,14 @@ const posts = await Promise.all(
 posts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
 ---
 
-<Layout>
+<Layout metaDescription="Explore our latest articles about web development, SEO, and business growth strategies. Stay updated with insights and tips from industry experts.">
     <section class="relative min-h-screen">
         <Image
             src={backgroundColour}
             alt="Background color"
             class="fixed inset-0 w-full h-full object-cover -z-10"
         />
-        <div class="absolute inset-0 bg-black opacity-50 -z-10"></div>
+        <div class="absolute inset-0 bg-black/80 -z-10"></div>
         
         <div class="relative z-10 max-w-6xl mx-auto px-4 py-20">
             <!-- Header -->

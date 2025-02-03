@@ -3,6 +3,12 @@ import Navbar from "../components/Navbar.astro"
 import { getImage } from "astro:assets";
 import logo from "../images/UysDesignLogoBlue.png";
 
+interface Props {
+    metaDescription?: string;
+}
+
+const { metaDescription = "Professional web development and design services by Uys Design. Creating modern, responsive websites with cutting-edge technology." } = Astro.props;
+
 const optimizedIcon = await getImage({
     src: logo,
     width: 32,
@@ -17,6 +23,7 @@ const optimizedIcon = await getImage({
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Uys Design</title>
+        <meta name="description" content={metaDescription} />
         <link rel="icon" type="image/png" href={optimizedIcon.src} />
     </head>
     <body class="bg-gray-900">
