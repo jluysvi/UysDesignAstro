@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import logo from "../images/UysDesignLogoBlue.png";
 
 const navLinks = [
@@ -15,10 +14,11 @@ const navLinks = [
         <div class="flex justify-between">
             <div class="flex space-x-7">
                 <a href="/" class="flex items-center py-4 px-2">
-                    <Image
-                        src={logo}
+                    <img
+                        src={logo.src}
                         alt="Logo"
                         class="h-16 w-16 mr-2 rounded-full p-1"
+                        loading="eager"
                     />
                 </a>
             </div>

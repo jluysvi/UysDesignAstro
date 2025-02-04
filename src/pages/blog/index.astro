@@ -1,7 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { Image } from "astro:assets";
 import backgroundColour from "../../images/bg.webp";
+import { Image } from "astro:assets";
 
 // Get all blog posts using import.meta.glob (fixed path)
 const posts = await Promise.all(
@@ -21,6 +21,9 @@ posts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
         <Image
             src={backgroundColour}
             alt="Background color"
+            width={1920}
+            height={1080}
+            loading="eager"
             class="fixed inset-0 w-full h-full object-cover -z-10"
         />
         <div class="absolute inset-0 bg-black opacity-50 -z-10"></div>
@@ -41,9 +44,11 @@ posts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
                         <a href={post.url} class="block h-full">
                             {post.frontmatter.image && (
                                 <div class="relative h-48">
-                                    <img 
+                                    <Image 
                                         src={post.frontmatter.image} 
                                         alt={post.frontmatter.title}
+                                        width={800}
+                                        height={400}
                                         class="w-full h-full object-cover"
                                     />
                                 </div>

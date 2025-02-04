@@ -1,5 +1,6 @@
 ---
 import Layout from "./Layout.astro";
+import { Image } from "astro:assets";
 const { frontmatter } = Astro.props;
 ---
 
@@ -10,7 +11,7 @@ const { frontmatter } = Astro.props;
         <div class="relative z-10 max-w-4xl mx-auto px-4 py-20">
             {frontmatter.image && (
                 <div class="w-full h-[400px] rounded-lg overflow-hidden mb-8">
-                    <img 
+                    <Image
                         src={frontmatter.image} 
                         alt={frontmatter.title}
                         class="w-full h-full object-cover"
