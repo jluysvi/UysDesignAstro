@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "allowJs": true,
+    "checkJs": false,
+    "module": "ESNext",
+    "target": "ESNext",
+    "baseUrl": "."
+  }
+}
